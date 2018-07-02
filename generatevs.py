@@ -1,8 +1,11 @@
 import random
+def initial_caps(name):
+	return name[0].upper()+name[1:]
+
 names={}
 for line in open('names.txt','r'):
 	name = line.strip()
-	names[name.lower()]=name
+	names[name.lower()]=initial_caps(name)
 
 
 for i in range(10):
